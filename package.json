@@ -1,0 +1,13 @@
+{
+  "name": "backend-interview-task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  },
+  "scripts": {
+    "postinstall": "yarn --cwd ./admin && yarn --cwd ./investments && yarn --cwd ./financial-companies",
+    "develop": "concurrently \"yarn --cwd ./admin develop\" \"yarn --cwd ./investments develop\" \"yarn --cwd ./financial-companies develop\""
+  }
+}
