@@ -32,9 +32,10 @@ describe("investmentsController", ()=>{
 
       const response = await supertest(app).get("/investments/1").expect(200)
       expect(response.body).toMatchObject(fakeData)
+      expect(mockAxiosResponse).toBeCalled()
     })
 
-    it("should be able to return return an error message when something goes wrong", async ()=>{
+    it("should be able to return an error message when something goes wrong", async ()=>{
       axiosMock.onGet("/investments/1").reply(500, "Internal Server Error")
       const result = await supertest(app).get("/investments/1").expect(500)
       await expect(result).toHaveProperty("text", "Internal Server Error")

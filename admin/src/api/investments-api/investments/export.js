@@ -6,6 +6,7 @@ const {errorHandler} = require("../..")
 const basePath = "investments/export"
 
 /**
+ * Creates a file and sends it to the Investments service
  * @param {String} content csv string
  */
 module.exports.exportReport = async function(content) {

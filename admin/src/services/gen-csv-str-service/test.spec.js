@@ -32,7 +32,7 @@ describe("genCsvStrService", ()=>{
     expect(result).toBe(vGenCsvStrService)
   })
 
-  it("should be able to generate a valid CSV string when there is no investments", async ()=>{
+  it("should be able to generate a valid CSV string when there are no investments", async ()=>{
     mockListInvestments.mockReturnValue(Promise.resolve([]))
 
     const result = await genCsvStrService.run()

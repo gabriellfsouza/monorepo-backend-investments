@@ -5,6 +5,11 @@ const {errorHandler} = require("..")
 
 const basePath = "companies"
 
+/**
+ * Retrieves a company by its id
+ * @param {*} id
+ * @returns
+ */
 module.exports.getCompany = async function(id) {
   try {
 

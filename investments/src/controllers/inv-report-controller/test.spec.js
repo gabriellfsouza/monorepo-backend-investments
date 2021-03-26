@@ -18,7 +18,7 @@ describe("invReportController", ()=>{
       expect(`${mocked.mock.calls[0][1]}`).toBe(`${original}`)
     })
 
-    it("should be able to return a HTTP error message", async ()=>{
+    it("should be able to return an HTTP error message", async ()=>{
       const pathOrigin = resolve(__dirname, "..", "..", "..", "fake-data", "report.csv")
       const pathDestination = resolve(__dirname, "..", "..", "..", "upload")
       const mocked = jest.spyOn(promises, "writeFile").mockImplementationOnce(()=>Promise.reject())

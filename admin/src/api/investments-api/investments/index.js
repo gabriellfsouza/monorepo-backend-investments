@@ -5,7 +5,9 @@ const {errorHandler} = require("../..")
 
 const basePath = "investments"
 
-
+/**
+ * Retrieve the entire list of investments
+ */
 module.exports.listInvestments = async function() {
   try {
 
@@ -18,6 +20,10 @@ module.exports.listInvestments = async function() {
   }
 }
 
+/**
+ * Retrieves a company by its id
+ * @param {String} id
+ */
 module.exports.getInvestment = async function(id) {
   try {
 

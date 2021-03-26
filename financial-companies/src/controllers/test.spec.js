@@ -12,7 +12,7 @@ describe("companiesController", ()=>{
       expect(result.body).toMatchObject(company)
     })
 
-    it("should return a HTTP not found message when the id was not found", async ()=>{
+    it("should return an HTTP not found message when the id does not found", async ()=>{
 
       const result = await supertest(app).get("/companies/not-a-valid-id").expect(404)
       expect(result.text).toBe("Not Found")

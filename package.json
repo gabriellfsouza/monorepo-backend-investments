@@ -9,6 +9,8 @@
   "scripts": {
     "postinstall": "yarn --cwd ./admin && yarn --cwd ./investments && yarn --cwd ./financial-companies",
     "develop": "concurrently \"yarn --cwd ./admin develop\" \"yarn --cwd ./investments develop\" \"yarn --cwd ./financial-companies develop\"",
-    "test": "concurrently \"yarn --cwd ./admin test\" \"yarn --cwd ./investments test\" \"yarn --cwd ./financial-companies test\""
+    "start": "concurrently \"yarn --cwd ./admin start\" \"yarn --cwd ./investments start\" \"yarn --cwd ./financial-companies start\"",
+    "test": "concurrently \"yarn --cwd ./admin test\" \"yarn --cwd ./investments test\" \"yarn --cwd ./financial-companies test\"",
+    "lint": "concurrently \"yarn --cwd ./admin lint\" \"yarn --cwd ./investments lint\" \"yarn --cwd ./financial-companies lint\""
   }
 }
