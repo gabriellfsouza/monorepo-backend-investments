@@ -8,6 +8,7 @@
   },
   "scripts": {
     "postinstall": "yarn --cwd ./admin && yarn --cwd ./investments && yarn --cwd ./financial-companies",
-    "develop": "concurrently \"yarn --cwd ./admin develop\" \"yarn --cwd ./investments develop\" \"yarn --cwd ./financial-companies develop\""
+    "develop": "concurrently \"yarn --cwd ./admin develop\" \"yarn --cwd ./investments develop\" \"yarn --cwd ./financial-companies develop\"",
+    "test": "concurrently \"yarn --cwd ./admin test\" \"yarn --cwd ./investments test\" \"yarn --cwd ./financial-companies test\""
   }
 }
