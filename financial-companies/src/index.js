@@ -1,12 +1,5 @@
-const express = require("express")
 const config = require("config")
-const companiesController = require("./controllers/companies-controller")
-
-const app = express()
-
-app.get("/companies", companiesController.index)
-
-app.get("/companies/:id", companiesController.show)
+const app = require("./app")
 
 app.listen(config.port, (err) => {
   if (err) {

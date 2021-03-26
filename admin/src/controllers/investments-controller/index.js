@@ -20,8 +20,8 @@ const investmentsController = {
       const investments = await getInvestment(id)
       return res.send(investments)
     } catch (error) {
-      console.error(error)
-      return res.send(500)
+      console.trace("Server error", error)
+      return res.status(500).send(error.message)
     }
   },
 }

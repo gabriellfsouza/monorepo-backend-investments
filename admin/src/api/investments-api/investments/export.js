@@ -3,7 +3,7 @@ const FormData = require("form-data")
 const investmentsApi = require("..")
 const {errorHandler} = require("../..")
 
-const basePath =  "investments/export"
+const basePath = "investments/export"
 
 /**
  * @param {String} content csv string
@@ -18,7 +18,9 @@ module.exports.exportReport = async function(content) {
   try {
 
     /** @type {import('axios').AxiosResponse<void>} */
-    const result = await investmentsApi.post(basePath, form, {headers: form.getHeaders()})
+    const result = await investmentsApi.post(basePath, form, {
+      headers: form.getHeaders(),
+    })
     return result.data
   } catch (error) {
     throw new Error(errorHandler(error))

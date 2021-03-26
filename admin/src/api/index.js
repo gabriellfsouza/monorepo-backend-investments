@@ -3,7 +3,7 @@ module.exports.errorHandler = function(error) {
 
     /** @type {import('axios').AxiosError<string>} */
     const axiosErr = error
-    throw new Error(axiosErr.response.data)
+    return axiosErr.response.data
   }
-  throw error
+  return error
 }

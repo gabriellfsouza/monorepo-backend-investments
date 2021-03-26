@@ -14,8 +14,13 @@ const reportController = {
    * @param {Response} res Response
    */
   store: async (_, res)=>{
-    await newReportService.run()
-    return res.status(204).send()
+    try {
+      await newReportService.run()
+      return res.status(204).send()
+    } catch (error) {
+      console.trace("Server error", error)
+      return res.status(500).send(error.message)
+    }
   },
 
   /**
@@ -23,8 +28,13 @@ const reportController = {
    * @param {Response} res Response
    */
   show: async (_, res) =>{
-    const str = await genCsvStrService.run()
-    return res.type("text").attachment("report.csv").send(str)
+    try {
+      const str = await genCsvStrService.run()
+      return res.type("text").attachment("report.csv").send(str)
+    } catch (error) {
+      console.trace("Server error", error)
+      return res.status(500).send(error.message)
+    }
   },
 }
 
