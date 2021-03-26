@@ -25,7 +25,7 @@ const invReportController = {
 
       return res.sendStatus(204)
     } catch (error) {
-      return res.status(501).send()
+      return res.status(500).send()
     }
   },
 }
