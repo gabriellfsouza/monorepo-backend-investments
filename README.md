@@ -33,12 +33,13 @@ yarn lint
 or
 yarn install
 ```
+Please, note that it was used `yarn` instead of `npm` in this case
 
 ### Improvements that can be done:
 
 1. How might you make this service more secure?
 
-    We can implement an authorization token system using OAuth or a system like AWS Cognito to provide the authorization flow and then include this on all HTTP requests to ensure the right to access the service (through an express middleware to check this token, for example). 
+    We can implement an authorization token system using OAuth or a system like AWS Cognito to provide the authorization flow and then include this on all HTTP requests to ensure the right to access the service (through an express middleware to check this token, for example).
 
     Verifying the source of the request (like IP of origin);
 
