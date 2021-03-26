@@ -23,6 +23,7 @@ const companiesController = {
   show: (req, res) =>{
     const {id: requestedId} = req.params
     const company = companies.find(({id}) => id === requestedId)
+    if (!company) res.status(404).send("Not Found")
     res.send(company)
   },
 }

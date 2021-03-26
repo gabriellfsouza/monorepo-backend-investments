@@ -1,3 +1,10 @@
 {
-  "extends": "@mft/eslint-config-momentumft"
+  "env": {
+    "jest":true
+  },
+  "extends": "@mft/eslint-config-momentumft",
+  "plugins": ["jest"],
+  "rules": {
+    "max-nested-callbacks":"off"
+  }
 }
