@@ -44,7 +44,7 @@ Investments - localhost:8081
 
 - `/investments` get all investments
 - `/investments/:id` get an investment record by id
-- `/investments/export` expects a csv formatted text input as the body
+- `/investments/export` expects a csv formatted file input as the body
 
 Financial Companies - localhost:8082
 
