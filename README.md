@@ -1,5 +1,3 @@
-# Moneyhub Tech Test - Investments and Holdings
-
 # Investments and Holdings
 
 This project consists of 3 microservices `admin` , `financial-companies` and `investments` , each representing different domains.
